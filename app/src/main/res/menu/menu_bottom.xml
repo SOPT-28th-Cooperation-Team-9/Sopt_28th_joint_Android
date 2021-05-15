@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/frame_18"
+        android:title="홈" />
+    <item
+        android:id="@+id/audioBook"
+        android:icon="@drawable/subtract"
+        android:title="오디오북" />
+    <item
+        android:id="@+id/myPage"
+        android:icon="@drawable/frame_19"
+        android:title="MY" />
+</menu>

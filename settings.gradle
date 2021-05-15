@@ -1,0 +1,2 @@
+rootProject.name = "sopt28_AudioBook"
+include ':app'
