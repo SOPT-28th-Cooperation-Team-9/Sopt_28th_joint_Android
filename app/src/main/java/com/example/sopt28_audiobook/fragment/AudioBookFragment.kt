@@ -13,39 +13,32 @@ import com.example.sopt28_audiobook.discountBook.DiscountBookData
 import com.example.sopt28_audiobook.newBook.NewBookAdapter
 import com.example.sopt28_audiobook.newBook.NewBookData
 import android.graphics.drawable.Drawable
+import androidx.recyclerview.widget.LinearLayoutManager
 
 
 class AudioBookFragment : Fragment() {
 
     private var _binding: FragmentAudioBookBinding?= null
     private val binding get() = _binding?:error("View를 참조하기 위해 binding이 초기화되지 않았습니다.")
+
     private lateinit var discountBookAdapter: DiscountBookAdapter
     private lateinit var newBookAdapter: NewBookAdapter
+    lateinit var snsAdapter: BookSnsRecyclerAdapter
+    lateinit var themeAdapter :BookThemeRecyclerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
 
         _binding = FragmentAudioBookBinding.inflate(
             inflater,
             container,
             false
         )
-        return binding.root
-    }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        // 민음사 세계문학 10권 70% 할인
+        // 첫번째 리사이클러뷰, 민음사 세계문학 10권 70% 할인
         discountBookAdapter = DiscountBookAdapter()
 
         binding.discountBookList.adapter = discountBookAdapter
@@ -107,7 +100,42 @@ class AudioBookFragment : Fragment() {
         )
         discountBookAdapter.notifyDataSetChanged()
 
-        // 새로나온 시집
+
+        // 두번째 리사이클러뷰, 요즘 SNS에서 화두인 책
+        snsAdapter = BookSnsRecyclerAdapter()
+
+        binding.BookSnsRecyclerView.adapter = snsAdapter
+
+        binding.BookSnsRecyclerView.layoutManager =
+            LinearLayoutManager(context).also { it.orientation = LinearLayoutManager.HORIZONTAL }
+
+        snsAdapter.bookList.addAll(
+            listOf(SnsBook("어린왕자", "안나영","8000",""),
+                SnsBook("신데렐", "야양","2000",""))
+        )
+        snsAdapter.notifyDataSetChanged()
+
+
+        // 세번째 리사이클러뷰, 주제별 오디오북
+        themeAdapter = BookThemeRecyclerAdapter()
+
+        binding.bookThemeRecyclerView.adapter = themeAdapter
+
+        binding.bookThemeRecyclerView.layoutManager =
+            LinearLayoutManager(context).also { it.orientation = LinearLayoutManager.HORIZONTAL }
+
+        themeAdapter.bookList.addAll(
+            listOf(SnsBook("소설", "안나영","8000",""),
+                SnsBook("추리", "야양","2000",""),
+                SnsBook("로맨스", "야양","2000",""),
+                SnsBook("코믹", "야양","2000",""),
+                SnsBook("시집", "야양","2000",""),
+                SnsBook("추리", "야양","2000",""))
+        )
+        themeAdapter.notifyDataSetChanged()
+
+
+       // 네번째 리사이클러뷰, 새로나온 시집
         newBookAdapter = NewBookAdapter()
 
         binding.newBookList.adapter = newBookAdapter
@@ -166,5 +194,17 @@ class AudioBookFragment : Fragment() {
             )
         )
         newBookAdapter.notifyDataSetChanged()
+
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
 }
