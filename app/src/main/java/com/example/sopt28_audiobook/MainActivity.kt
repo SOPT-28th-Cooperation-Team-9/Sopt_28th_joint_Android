@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 binding.mainBottomNavi.menu.getItem(position).isChecked = true
             }
-
         })
 
         setContentView(binding.root)
