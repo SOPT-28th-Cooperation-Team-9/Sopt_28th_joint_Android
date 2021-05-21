@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="18dp">
+
+    <ImageView
+        android:id="@+id/book_detail_item_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectangle_1053" />
+
+    <TextView
+        android:id="@+id/book_detail_item_tv_chap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.01"
+        android:text="북 챕터 이름"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/book_detail_item_iv"
+        app:layout_constraintTop_toTopOf="@+id/book_detail_item_iv" />
+
+    <TextView
+        android:id="@+id/book_detail_item_tv_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오디오 시간"
+        android:textColor="#7e7e80"
+        android:textSize="11sp"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="@+id/book_detail_item_tv_chap"
+        app:layout_constraintTop_toBottomOf="@+id/book_detail_item_tv_chap" />
+</androidx.constraintlayout.widget.ConstraintLayout>
