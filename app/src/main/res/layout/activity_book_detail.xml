@@ -54,6 +54,8 @@
                 android:text="데미안 (민음사 세계문학, 완\n독본)"
                 android:textColor="@color/white"
                 android:textSize="20sp"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:includeFontPadding="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_iv_book"
                 app:layout_constraintTop_toTopOf="@+id/book_detail_iv_book" />
@@ -66,6 +68,8 @@
                 android:text="헤르만 헤세 저 ·최승훈 외 1인 낭독"
                 android:textColor="#d5d5e0"
                 android:textSize="13sp"
+                android:fontFamily="@font/noto_sans_kr_medium"
+                android:includeFontPadding="false"
                 app:layout_constraintStart_toStartOf="@+id/book_detail_tv_header"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_header" />
 
@@ -76,6 +80,8 @@
                 android:layout_marginTop="15dp"
                 android:letterSpacing="-0.04"
                 android:text="민음사"
+                android:fontFamily="@font/noto_sans_kr_medium"
+                android:includeFontPadding="false"
                 android:textColor="#7e7d82"
                 android:textSize="13sp"
                 app:layout_constraintStart_toStartOf="@+id/book_detail_tv_author"
@@ -90,6 +96,8 @@
                 android:text="81,640"
                 android:textColor="#7e7d82"
                 android:textSize="11sp"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:includeFontPadding="false"
                 app:layout_constraintBottom_toBottomOf="@+id/book_detail_iv_view"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_iv_view"
                 app:layout_constraintTop_toTopOf="@+id/book_detail_iv_view" />
@@ -133,6 +141,8 @@
                 android:text="EVENT"
                 android:textColor="@color/white"
                 android:textSize="8sp"
+                android:fontFamily="@font/noto_sans_kr_medium"
+                android:includeFontPadding="false"
                 app:layout_constraintBottom_toBottomOf="@+id/book_detail_iv_blue_rec"
                 app:layout_constraintEnd_toEndOf="@+id/book_detail_iv_blue_rec"
                 app:layout_constraintStart_toStartOf="@+id/book_detail_iv_blue_rec"
@@ -147,6 +157,8 @@
                 android:text="민음사 세계문학 오디오북 10권 70% 할인!"
                 android:textColor="#b0b3b4"
                 android:textSize="13sp"
+                android:fontFamily="@font/noto_sans_kr_medium"
+                android:includeFontPadding="false"
                 app:layout_constraintBottom_toBottomOf="@id/book_detail_iv_blue_rec"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_iv_blue_rec"
                 app:layout_constraintTop_toTopOf="@id/book_detail_iv_blue_rec" />
@@ -171,6 +183,8 @@
                 android:text="샘플 듣기"
                 android:textColor="@color/white"
                 android:textSize="12sp"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:includeFontPadding="false"
                 app:layout_constraintBottom_toBottomOf="@+id/book_detail_purple_rec"
                 app:layout_constraintEnd_toEndOf="@+id/book_detail_purple_rec"
                 app:layout_constraintStart_toStartOf="@+id/book_detail_purple_rec"
@@ -229,6 +243,8 @@
                 android:text="1,957"
                 android:textColor="@color/white"
                 android:textSize="12sp"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:includeFontPadding="false"
                 app:layout_constraintBottom_toBottomOf="@+id/book_detail_icon_heart"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_icon_heart"
                 app:layout_constraintTop_toTopOf="@+id/book_detail_icon_heart" />
@@ -242,6 +258,8 @@
                 android:text="이용기간 30일"
                 android:textColor="#8c8d91"
                 android:textSize="12sp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:includeFontPadding="false"
                 app:layout_constraintStart_toStartOf="@+id/book_detail_iv_black_rec"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_purple_rec" />
 
@@ -274,9 +292,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:letterSpacing="-0.03"
-                android:text="2700원"
+                android:text="2,700원"
                 android:textColor="@color/white"
                 android:textSize="16sp"
+                android:fontFamily="@font/noto_sans_kr_medium"
+                android:includeFontPadding="false"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_green_rec1"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_rent" />
 
@@ -288,6 +308,8 @@
                 android:letterSpacing="-0.01"
                 android:text="9,000원 (-70%)"
                 android:textColor="#8c8d91"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:includeFontPadding="false"
                 app:layout_constraintBottom_toBottomOf="@+id/book_detail_tv_rent_discount"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_tv_rent_discount" />
 
@@ -307,6 +329,8 @@
                 android:layout_height="wrap_content"
                 android:text="대여"
                 android:textColor="#147ff9"
+                android:fontFamily="@font/noto_sans_kr_medium"
+                android:includeFontPadding="false"
                 app:layout_constraintBottom_toBottomOf="@+id/book_detail_iv_blue_rec1"
                 app:layout_constraintEnd_toEndOf="@+id/book_detail_iv_blue_rec1"
                 app:layout_constraintStart_toStartOf="@+id/book_detail_iv_blue_rec1"
@@ -321,6 +345,8 @@
                 android:text="영구 소장"
                 android:textColor="#8c8d91"
                 android:textSize="12sp"
+                android:fontFamily="@font/noto_sans_kr_medium"
+                android:includeFontPadding="false"
                 app:layout_constraintStart_toStartOf="@+id/book_detail_tv_rent"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_green_rec1" />
 
@@ -353,9 +379,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:letterSpacing="-0.03"
-                android:text="8100원"
+                android:text="8,100원"
                 android:textColor="@color/white"
                 android:textSize="16sp"
+                android:fontFamily="@font/noto_sans_kr_medium"
+                android:includeFontPadding="false"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_green_rec2"
                 app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_buy" />
 
@@ -367,6 +395,8 @@
                 android:letterSpacing="-0.01"
                 android:text="9,000원 (-10%)"
                 android:textColor="#8c8d91"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:includeFontPadding="false"
                 app:layout_constraintBottom_toBottomOf="@+id/book_detail_tv_buy_discount"
                 app:layout_constraintStart_toEndOf="@+id/book_detail_tv_buy_discount" />
 
@@ -385,6 +415,8 @@
                 android:layout_height="wrap_content"
                 android:text="구매"
                 android:textColor="#147ff9"
+                android:fontFamily="@font/noto_sans_kr_medium"
+                android:includeFontPadding="false"
                 app:layout_constraintBottom_toBottomOf="@+id/book_detail_iv_blue_rec2"
                 app:layout_constraintEnd_toEndOf="@+id/book_detail_iv_blue_rec2"
                 app:layout_constraintStart_toStartOf="@+id/book_detail_iv_blue_rec2"
@@ -399,6 +431,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/book_detail_tv_buy_header"
                 android:background="@color/black"
+                app:tabTextAppearance="@style/tab_text"
                 app:tabGravity="fill"
                 app:tabTextColor="#7e7d82"
                 app:tabSelectedTextColor="@color/white"
@@ -448,6 +481,8 @@
         android:text="재생목록이 없습니다."
         android:textColor="#cfcfd1"
         android:textSize="15sp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
         android:layout_marginStart="18dp"
         app:layout_constraintTop_toTopOf="@id/book_detail_iv_play_bar"
         app:layout_constraintBottom_toBottomOf="@id/book_detail_iv_play_bar"
@@ -462,6 +497,52 @@
         app:layout_constraintTop_toTopOf="@id/book_detail_iv_play_bar"
         app:layout_constraintBottom_toBottomOf="@id/book_detail_iv_play_bar"
         app:layout_constraintEnd_toEndOf="@id/book_detail_iv_play_bar" />
+
+    <ImageView
+        android:id="@+id/book_detail_btn_15sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ellipse_157"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toTopOf="@id/book_detail_btn_play"
+        app:layout_constraintStart_toEndOf="@id/book_detail_btn_play"
+        app:layout_constraintBottom_toBottomOf="@id/book_detail_btn_play" />
+
+    <ImageView
+        android:id="@+id/book_detail_btn_15sec_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vector_722"
+        android:layout_marginStart="19dp"
+        app:layout_constraintTop_toTopOf="@id/book_detail_btn_15sec"
+        app:layout_constraintStart_toStartOf="@id/book_detail_btn_15sec"
+        app:layout_constraintBottom_toBottomOf="@id/book_detail_btn_15sec" />
+
+    <TextView
+        android:id="@+id/book_detail_tv_15sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:letterSpacing="-0.03"
+        app:layout_constraintTop_toTopOf="@id/book_detail_btn_15sec"
+        app:layout_constraintStart_toStartOf="@id/book_detail_btn_15sec"
+        app:layout_constraintBottom_toBottomOf="@id/book_detail_btn_15sec"
+        app:layout_constraintEnd_toEndOf="@id/book_detail_btn_15sec"/>
+
+    <ImageView
+        android:id="@+id/book_detail_btn_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/frame_25"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toTopOf="@id/book_detail_btn_15sec"
+        app:layout_constraintStart_toEndOf="@id/book_detail_btn_15sec"
+        app:layout_constraintBottom_toBottomOf="@id/book_detail_btn_15sec" />
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/book_detail_bottom_navi"
