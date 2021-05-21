@@ -14,6 +14,8 @@
         android:text="총 9개 챕터, 6시간 59분"
         android:textColor="#e3e3e7"
         android:textSize="14sp"
+        android:fontFamily="@font/noto_sans_kr_bold"
+        android:includeFontPadding="false"
         android:layout_marginTop="18dp"
         android:layout_marginStart="18dp"
         app:layout_constraintStart_toStartOf="parent"

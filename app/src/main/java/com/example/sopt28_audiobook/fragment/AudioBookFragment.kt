@@ -1,5 +1,6 @@
 package com.example.sopt28_audiobook.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import com.example.sopt28_audiobook.newBook.NewBookAdapter
 import com.example.sopt28_audiobook.newBook.NewBookData
 import android.graphics.drawable.Drawable
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.sopt28_audiobook.BookDetailActivity
 
 
 class AudioBookFragment : Fragment() {
@@ -99,6 +101,15 @@ class AudioBookFragment : Fragment() {
             )
         )
         discountBookAdapter.notifyDataSetChanged()
+
+        /*book click listener 재정의*/
+        discountBookAdapter.setOnBookClickListener(object :
+            DiscountBookAdapter.OnBookClickListener{
+            override fun onBookClick() {
+                val intent = Intent(activity, BookDetailActivity::class.java)
+                startActivity(intent)
+            }
+        })
 
 
         // 두번째 리사이클러뷰, 요즘 SNS에서 화두인 책

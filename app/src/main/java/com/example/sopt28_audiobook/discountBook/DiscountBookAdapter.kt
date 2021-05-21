@@ -26,7 +26,18 @@ class DiscountBookAdapter: RecyclerView.Adapter<DiscountBookAdapter.DiscountBook
         holder.onBind(discountBookList[position])
     }
 
-    class DiscountBookViewHolder(
+    /*리사이클러뷰 아이템 클릭시 BookDetailActivity로 이동하기 위한 book click listener 정의*/
+    interface OnBookClickListener {
+        fun onBookClick()
+    }
+
+    private lateinit var bookClickListener: OnBookClickListener
+
+    fun setOnBookClickListener(listener: OnBookClickListener) {
+        this.bookClickListener = listener
+    }
+
+    inner class DiscountBookViewHolder(
         private val binding: ItemDiscountBookBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(discountBookData: DiscountBookData) {
@@ -35,6 +46,10 @@ class DiscountBookAdapter: RecyclerView.Adapter<DiscountBookAdapter.DiscountBook
             binding.tvAudioBookBookTitle.text = discountBookData.textviewBookTitle
             binding.tvAudioBookBookPeople.text = discountBookData.textviewBookPeople
             binding.tvAudioBookBookPrice.text = discountBookData.textviewBookPrice
+
+            itemView.setOnClickListener {
+                bookClickListener.onBookClick()
+            }
         }
     }
 }
