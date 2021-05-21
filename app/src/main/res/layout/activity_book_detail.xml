@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".BookDetailActivity">
+
+    <ImageView
+        android:id="@+id/book_detail_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vector_727" />
+    
+    <ScrollView
+        android:id="@+id/book_detail_sv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@id/book_detail_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/book_detail_iv_play_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/book_detail_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/book_detail_iv_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_cv"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_cv"
+                app:srcCompat="@drawable/rectangle_1051" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="24dp"
+                android:letterSpacing="-0.09"
+                android:text="데미안 (민음사 세계문학, 완\n독본)"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_iv_book"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_iv_book" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.02"
+                android:text="헤르만 헤세 저 ·최승훈 외 1인 낭독"
+                android:textColor="#d5d5e0"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_tv_header"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_header" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:letterSpacing="-0.04"
+                android:text="민음사"
+                android:textColor="#7e7d82"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_tv_author"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_author" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:letterSpacing="0.03"
+                android:text="81,640"
+                android:textColor="#7e7d82"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_iv_view"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_iv_view"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_iv_view" />
+
+            <ImageView
+                android:id="@+id/book_detail_iv_black_rec"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_iv_book"
+                app:srcCompat="@drawable/round_rectangle_black1d_6dp" />
+
+            <ImageView
+                android:id="@+id/book_detail_iv_view"
+                android:layout_width="7dp"
+                android:layout_height="9.5dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_tv_publisher"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_publisher"
+                app:srcCompat="@drawable/vector_710" />
+
+            <ImageView
+                android:id="@+id/book_detail_iv_blue_rec"
+                android:layout_width="32dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_iv_black_rec"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_iv_black_rec"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_iv_black_rec"
+                app:srcCompat="@drawable/round_rectangle_blue147ff9_2dp" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_event_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="-0.05"
+                android:text="EVENT"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_iv_blue_rec"
+                app:layout_constraintEnd_toEndOf="@+id/book_detail_iv_blue_rec"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_iv_blue_rec"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_iv_blue_rec" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:letterSpacing="0.02"
+                android:text="민음사 세계문학 오디오북 10권 70% 할인!"
+                android:textColor="#b0b3b4"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/book_detail_iv_blue_rec"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_iv_blue_rec"
+                app:layout_constraintTop_toTopOf="@id/book_detail_iv_blue_rec" />
+
+            <ImageView
+                android:id="@+id/book_detail_purple_rec"
+                android:layout_width="185dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/book_detail_gray_rec1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_iv_black_rec"
+                app:srcCompat="@drawable/round_rectangle_purple_3dp" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_purple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="-0.03"
+                android:text="샘플 듣기"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_purple_rec"
+                app:layout_constraintEnd_toEndOf="@+id/book_detail_purple_rec"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_purple_rec"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_purple_rec" />
+
+            <ImageView
+                android:id="@+id/book_detail_gray_rec1"
+                android:layout_width="86dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_purple_rec"
+                app:layout_constraintEnd_toStartOf="@+id/book_detail_gray_rec2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_purple_rec"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_purple_rec"
+                app:srcCompat="@drawable/boarder_round_rectangle_gray48_3dp" />
+
+            <ImageView
+                android:id="@+id/book_detail_gray_rec2"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_gray_rec1"
+                app:layout_constraintEnd_toEndOf="@+id/book_detail_iv_black_rec"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_gray_rec1"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_gray_rec1"
+                app:srcCompat="@drawable/boarder_round_rectangle_gray48_3dp" />
+
+            <ImageView
+                android:id="@+id/book_detail_icon_share"
+                android:layout_width="18.5dp"
+                android:layout_height="16.5dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_gray_rec2"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_gray_rec2"
+                app:srcCompat="@drawable/vector_712" />
+
+            <ImageView
+                android:id="@+id/book_detail_icon_heart"
+                android:layout_width="13dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_gray_rec1"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_gray_rec1"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_gray_rec1"
+                app:srcCompat="@drawable/union" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_heart_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:letterSpacing="-0.04"
+                android:text="1,957"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_icon_heart"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_icon_heart"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_icon_heart" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:letterSpacing="-0.04"
+                android:text="이용기간 30일"
+                android:textColor="#8c8d91"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_iv_black_rec"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_purple_rec" />
+
+            <ImageView
+                android:id="@+id/book_detail_green_rec1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_tv_rent"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_rent"
+                app:srcCompat="@drawable/boarder_round_rectangle_green348e51_3dp" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_n1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="-0.05"
+                android:text="N"
+                android:textColor=" #348e51  "
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_green_rec1"
+                app:layout_constraintEnd_toEndOf="@+id/book_detail_green_rec1"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_green_rec1"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_green_rec1" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_rent_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:letterSpacing="-0.03"
+                android:text="2700원"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_green_rec1"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_rent" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_rent_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:letterSpacing="-0.01"
+                android:text="9,000원 (-70%)"
+                android:textColor="#8c8d91"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_tv_rent_discount"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_tv_rent_discount" />
+
+            <ImageView
+                android:id="@+id/book_detail_iv_blue_rec1"
+                android:layout_width="65dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_gray_rec2"
+                app:srcCompat="@drawable/boarder_round_rectangle_blue147ff9_27dp" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_rent_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대여"
+                android:textColor="#147ff9"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_iv_blue_rec1"
+                app:layout_constraintEnd_toEndOf="@+id/book_detail_iv_blue_rec1"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_iv_blue_rec1"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_iv_blue_rec1" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:letterSpacing="-0.05"
+                android:text="영구 소장"
+                android:textColor="#8c8d91"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_tv_rent"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_green_rec1" />
+
+            <ImageView
+                android:id="@+id/book_detail_green_rec2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_tv_buy"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_buy"
+                app:srcCompat="@drawable/boarder_round_rectangle_green348e51_3dp" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_n2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="-0.05"
+                android:text="N"
+                android:textColor="#348e51"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_green_rec2"
+                app:layout_constraintEnd_toEndOf="@+id/book_detail_green_rec2"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_green_rec2"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_green_rec2" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_buy_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:letterSpacing="-0.03"
+                android:text="8100원"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_green_rec2"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_tv_buy" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_buy_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:letterSpacing="-0.01"
+                android:text="9,000원 (-10%)"
+                android:textColor="#8c8d91"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_tv_buy_discount"
+                app:layout_constraintStart_toEndOf="@+id/book_detail_tv_buy_discount" />
+
+            <ImageView
+                android:id="@+id/book_detail_iv_blue_rec2"
+                android:layout_width="65dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="@id/book_detail_iv_blue_rec1"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_iv_blue_rec1"
+                app:srcCompat="@drawable/boarder_round_rectangle_blue147ff9_27dp" />
+
+            <TextView
+                android:id="@+id/book_detail_tv_buy_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="구매"
+                android:textColor="#147ff9"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_iv_blue_rec2"
+                app:layout_constraintEnd_toEndOf="@+id/book_detail_iv_blue_rec2"
+                app:layout_constraintStart_toStartOf="@+id/book_detail_iv_blue_rec2"
+                app:layout_constraintTop_toTopOf="@+id/book_detail_iv_blue_rec2" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/book_detail_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/book_detail_tv_buy_header"
+                android:background="@color/black"
+                app:tabGravity="fill"
+                app:tabTextColor="#7e7d82"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="3dp"/>
+
+            <ImageView
+                android:id="@+id/book_detail_iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:srcCompat="@drawable/rectangle_gray48"
+                app:layout_constraintBottom_toBottomOf="@id/book_detail_tab_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/book_detail_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="780dp"
+                app:layout_constraintBottom_toBottomOf="@+id/book_detail_cv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_tab_layout" >
+            </androidx.viewpager.widget.ViewPager>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/book_detail_iv_play_bar"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/rectangle_black191919" />
+
+    <TextView
+        android:id="@+id/book_detail_tv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.08"
+        android:text="재생목록이 없습니다."
+        android:textColor="#cfcfd1"
+        android:textSize="15sp"
+        android:layout_marginStart="18dp"
+        app:layout_constraintTop_toTopOf="@id/book_detail_iv_play_bar"
+        app:layout_constraintBottom_toBottomOf="@id/book_detail_iv_play_bar"
+        app:layout_constraintStart_toStartOf="@id/book_detail_iv_play_bar"/>
+
+    <ImageView
+        android:id="@+id/book_detail_btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vector_723"
+        android:layout_marginEnd="108dp"
+        app:layout_constraintTop_toTopOf="@id/book_detail_iv_play_bar"
+        app:layout_constraintBottom_toBottomOf="@id/book_detail_iv_play_bar"
+        app:layout_constraintEnd_toEndOf="@id/book_detail_iv_play_bar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/book_detail_bottom_navi"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/black"
+        app:menu="@menu/menu_bottom"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="@color/black"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
