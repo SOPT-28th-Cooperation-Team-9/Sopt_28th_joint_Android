@@ -75,7 +75,6 @@ class DetailChapFragment : Fragment() {
                 )
             )
         )
-
         detailChapAdapter.notifyDataSetChanged()
 
         return binding.root

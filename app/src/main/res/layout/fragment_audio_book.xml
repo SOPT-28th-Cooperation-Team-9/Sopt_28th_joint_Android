@@ -212,8 +212,10 @@
                 android:id="@+id/sns_book_layout"
                 android:layout_width="match_parent"
                 android:layout_height="358dp"
+                android:layout_marginTop="8dp"
                 android:background="#121212"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/discount_book_layout">
 
@@ -223,11 +225,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="19dp"
                     android:layout_marginTop="28dp"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:includeFontPadding="false"
                     android:text="요즘 SNS에서 화두인 책"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/sns_book_layout"/>
+                    app:layout_constraintTop_toTopOf="@id/sns_book_layout" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -235,11 +239,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="18dp"
                     android:text="더보기"
-                    android:textSize="15sp"
                     android:textColor="#7e7e80"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/noto_sans_kr_regular"
                     app:layout_constraintBottom_toBottomOf="@+id/textView3"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView3"/>
+                    app:layout_constraintTop_toTopOf="@+id/textView3" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/BookSnsRecyclerView"
@@ -250,7 +255,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/textView3"
                     app:layout_constraintTop_toBottomOf="@+id/textView3"
-                    tools:listitem="@layout/item_sns_book"/>
+                    tools:listitem="@layout/item_sns_book" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -269,6 +274,8 @@
                     app:layout_constraintStart_toStartOf="@+id/theme_book_layout"
                     android:textColor="@color/white"
                     android:text="주제별 오디오북"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:includeFontPadding="false"
                     android:layout_marginStart="18dp"
                     android:textSize="20sp"
                     android:layout_marginTop="28dp"/>
