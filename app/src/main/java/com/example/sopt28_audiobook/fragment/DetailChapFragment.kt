@@ -80,7 +80,6 @@ class DetailChapFragment : Fragment() {
                 )
             )
         )
-
         detailChapAdapter.notifyDataSetChanged()
     }
 
