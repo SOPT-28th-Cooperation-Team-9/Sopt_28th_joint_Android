@@ -308,6 +308,8 @@
                     android:text="새로나온 시집"
                     android:textColor="#ffffff"
                     android:textSize="17sp"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:includeFontPadding="false"
                     app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <TextView
@@ -317,6 +319,8 @@
                     android:text="더보기"
                     android:textColor="#7e7e80"
                     android:textSize="15sp"
+                    android:fontFamily="@font/noto_sans_kr_regular"
+                    android:includeFontPadding="false"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginRight="18dp"/>
 
