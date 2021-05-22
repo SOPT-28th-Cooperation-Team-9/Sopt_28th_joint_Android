@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vector_727" />
     
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/book_detail_sv"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -30,7 +30,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/book_detail_cv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ImageView
@@ -45,13 +45,13 @@
 
             <TextView
                 android:id="@+id/book_detail_tv_header"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="24dp"
                 android:letterSpacing="-0.09"
-                android:text="데미안 (민음사 세계문학, 완\n독본)"
+                android:text="데미안 (민음사 세계문학, 완독본)"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:fontFamily="@font/noto_sans_kr_bold"
@@ -448,19 +448,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
-            <androidx.viewpager.widget.ViewPager
+            <com.example.sopt28_audiobook.CustomViewPager
                 android:id="@+id/book_detail_viewpager"
                 android:layout_width="match_parent"
-                android:layout_height="780dp"
-                app:layout_constraintBottom_toBottomOf="@+id/book_detail_cv"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/book_detail_tab_layout" >
-            </androidx.viewpager.widget.ViewPager>
+                app:layout_constraintTop_toBottomOf="@+id/book_detail_tab_layout"></com.example.sopt28_audiobook.CustomViewPager>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
     <ImageView

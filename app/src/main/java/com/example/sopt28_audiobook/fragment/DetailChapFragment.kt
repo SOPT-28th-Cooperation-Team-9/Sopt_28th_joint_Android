@@ -24,11 +24,6 @@ class DetailChapFragment : Fragment() {
             container,
             false
         )
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         detailChapAdapter = DetailChapAdapter()
         binding.chapterList.adapter = detailChapAdapter
         detailChapAdapter.chapterList.addAll(
@@ -81,6 +76,8 @@ class DetailChapFragment : Fragment() {
             )
         )
         detailChapAdapter.notifyDataSetChanged()
+
+        return binding.root
     }
 
     override fun onDestroyView() {
